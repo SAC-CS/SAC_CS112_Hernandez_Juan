@@ -6,4 +6,4 @@ public class HelloWorld
 		System.out.println("Hello World!");
 		
 	} // end method main
-} // end class HelloWorlds
+} // end class HelloWorld
