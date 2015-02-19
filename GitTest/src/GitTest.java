@@ -5,6 +5,7 @@ public class GitTest
 	{
 		System.out.println("GitTest");
 		System.out.println("Yeah!");
+		System.out.println("Yeah not!");
 	} // end method main
 
 }
