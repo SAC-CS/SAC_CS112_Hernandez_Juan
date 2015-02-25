@@ -9,7 +9,8 @@ public class HelloMyName
 		
 		String nameOne = "Hello World!";
 		
-		System.out.printf(nameOne);
+		System.out.printf("%s", nameOne);
+		
 
 	}
 
