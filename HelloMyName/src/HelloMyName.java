@@ -10,16 +10,19 @@ public class HelloMyName
 	{
 		Scanner input = new Scanner (System.in);
 		
+		// Variables
 		int numOne;
 		int numTwo;
 		
+		// User input
 		System.out.print("Enter first number: ");
 		numOne = input.nextInt();
 		
 		System.out.print("Enter second number: ");
 		numTwo = input.nextInt();
 		
-		System.out.printf("%d\n%d\n", numOne, numTwo);
+		// Output
+		System.out.printf("%s%d%s%d%s","Hello, you entered ", numOne, " and ", numTwo, ".");
 		
 	}
 
