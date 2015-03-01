@@ -22,7 +22,7 @@ public class HelloMyName
 		numTwo = input.nextInt();
 		
 		// Output
-		System.out.printf("%s%d%s%d%s","Hello, you entered ", numOne, " and ", numTwo, ".");
+		System.out.printf("Hello, you entered %d %s %d %s", numOne, " and ", numTwo, ".");
 		
 	}
 
