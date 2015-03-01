@@ -7,7 +7,7 @@ public class GitTestBeast
 	public static void main (String[] args)
 	{
 
-		System.out.println("Git Test Beast");
+		System.out.println("Git Test Beast 2");
 		
 	}
 
