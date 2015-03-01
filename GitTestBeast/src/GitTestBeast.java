@@ -7,7 +7,7 @@ public class GitTestBeast
 	public static void main (String[] args)
 	{
 
-		System.out.println("Git Test Minnie Beast 2");
+		System.out.println("Git Test Minnie Beast 3");
 		
 	}
 
