@@ -13,6 +13,9 @@ public class Calculator
 		double calculation = 0;
 		int choice;
 	
+		// User options
+		System.out.println("Simple Calculator\nEnter:\n1 for Addition\n2 for Substraction\n3 for Multiplication\n4 for Division\n");
+		choice = input.nextInt();
 		
 		// User input
 		System.out.print("Enter first number: ");
@@ -20,8 +23,7 @@ public class Calculator
 		System.out.print("Enter second number: ");
 		numTwo = input.nextFloat();
 		// Output for users to chose calculation
-		System.out.println("\nSimple Calculator\nEnter:\n\n1 for Addition\n2 for Substraction\n3 for Multiplication\n4 for Division\n");
-		choice = input.nextInt();
+		
 		
 		// Possible calculations
 		if(choice == 1)
