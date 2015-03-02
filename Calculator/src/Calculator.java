@@ -25,7 +25,7 @@ public class Calculator
 		// Output for users to chose calculation
 		
 		
-		// Possible calculations
+		// Possible calculations to choose.
 		if(choice == 1)
 		{
 			calculation = numOne + numTwo;
