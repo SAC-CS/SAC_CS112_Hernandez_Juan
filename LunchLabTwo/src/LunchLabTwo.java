@@ -8,7 +8,6 @@ public class LunchLabTwo
 	public static void main (String[] args)
 	{
 		int choice = 0;
-		int choiceTwo = 0;
 		
 		Scanner input = new Scanner (System.in);
 		
@@ -22,10 +21,10 @@ public class LunchLabTwo
 		if (choice == 1)
 		{
 			System.out.println("Have you had breakfast?\nEnter 1 if you had breakfast or 0 if you have not.");
-			choiceTwo = input.nextInt();
-			if (choiceTwo == 1)
+			choice = input.nextInt();
+			if (choice == 1)
 				System.out.println("Okay, buy a diet coke!");
-			else if (choiceTwo == 0)
+			else if (choice == 0)
 				System.out.println("Okay, buy a coke!");
 		}
 		else
