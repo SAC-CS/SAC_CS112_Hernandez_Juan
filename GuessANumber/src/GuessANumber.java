@@ -21,11 +21,11 @@ public class GuessANumber
 		
 		// Process
 		if (userNum == computerNum)
-			System.out.println("Correct!");
+			System.out.println("Correct, You Win!!");
 		if (userNum > computerNum)
-			System.out.println("Too big!");
+			System.out.println("Number is too big!");
 		if (userNum < computerNum)
-			System.out.println("Too small!");
+			System.out.println("Number is too small!");
 		
 		System.out.printf("%s%d", "Computer's number was: ", computerNum);
 	}
