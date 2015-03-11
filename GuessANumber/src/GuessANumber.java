@@ -11,6 +11,7 @@ public class GuessANumber
 		// Variables
 		int computerNum;
 		int playerNum;
+		String answer;
 		computerNum = 0 + (int) (Math.random() * 10);
 		
 		Scanner input = new Scanner (System.in);
@@ -34,5 +35,14 @@ public class GuessANumber
 		
 		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
 		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
+		
+		System.out.print("\n\nWould you like to play again? ");
+		answer = input.next();
+		answer = answer.toUpperCase();
+		
+		if (answer.equals("Y"))
+			System.out.println("Okay, just run the program again.");
+		else
+			System.out.println("Goodbye!");
 	}
 }
