@@ -10,23 +10,25 @@ public class GuessANumber
 		
 		// Variables
 		int computerNum;
-		int userNum;
+		int playerNum;
 		computerNum = 0 + (int) (Math.random() * 10);
 		
 		Scanner input = new Scanner (System.in);
 		
 		// User input
 		System.out.print("Enter a number between 0 and 10: ");
-		userNum = input.nextInt();
+		playerNum = input.nextInt();
 		
 		// Process
-		if (userNum == computerNum)
+		if (playerNum == computerNum)
 			System.out.println("Correct, You Win!!");
-		if (userNum > computerNum)
+		else if (playerNum > computerNum)
 			System.out.println("Number is too big!");
-		if (userNum < computerNum)
+		else
 			System.out.println("Number is too small!");
 		
-		System.out.printf("%s%d", "Computer's number was: ", computerNum);
+		
+		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
+		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
 	}
 }
