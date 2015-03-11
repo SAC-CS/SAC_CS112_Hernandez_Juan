@@ -26,5 +26,7 @@ public class GuessANumber
 			System.out.println("Too big!");
 		if (userNum < computerNum)
 			System.out.println("Too small!");
+		
+		System.out.printf("%s%d", "Computer's number was: ", computerNum);
 	}
 }
