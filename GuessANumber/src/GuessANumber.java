@@ -20,13 +20,17 @@ public class GuessANumber
 		playerNum = input.nextInt();
 		
 		// Process
-		if (playerNum == computerNum)
-			System.out.println("Correct, You Win!!");
-		else if (playerNum > computerNum)
-			System.out.println("Number is too big!");
+		if ((playerNum >= 0) && (playerNum <= 10))
+		{
+			if (playerNum == computerNum)
+				System.out.println("Correct, You Win!!");
+			else if (playerNum > computerNum)
+				System.out.println("Number is too big!");
+			else
+				System.out.println("Number is too small!");
+		}
 		else
-			System.out.println("Number is too small!");
-		
+			System.out.println("You entered a number bigger than 10.");
 		
 		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
 		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
