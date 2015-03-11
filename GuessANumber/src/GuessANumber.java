@@ -34,9 +34,9 @@ public class GuessANumber
 		}
 		
 		System.out.println("\nPlayer's number was: " + playerNum);
-		System.out.println("\nComputer's number was: " + computerNum);
+		System.out.println("Computer's number was: " + computerNum);
 		
-		System.out.print("\n\nWould you like to play again? ");
+		System.out.print("\nWould you like to play again? ");
 		answer = input.next();
 		answer = answer.toUpperCase();
 		
