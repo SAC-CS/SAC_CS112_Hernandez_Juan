@@ -33,8 +33,8 @@ public class GuessANumber
 				System.out.println("Number is too small!");
 		}
 		
-		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
-		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
+		System.out.println("\nPlayer's number was: " + playerNum);
+		System.out.println("\nComputer's number was: " + computerNum);
 		
 		System.out.print("\n\nWould you like to play again? ");
 		answer = input.next();
