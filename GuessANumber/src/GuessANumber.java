@@ -20,7 +20,9 @@ public class GuessANumber
 		playerNum = input.nextInt();
 		
 		// Process
-		if ((playerNum >= 0) && (playerNum <= 10))
+		if ((playerNum < 0) || (playerNum > 10))
+			System.out.println("You entered an invalid number.");
+		else
 		{
 			if (playerNum == computerNum)
 				System.out.println("Correct, You Win!!");
@@ -29,8 +31,6 @@ public class GuessANumber
 			else
 				System.out.println("Number is too small!");
 		}
-		else
-			System.out.println("You entered an invalid number.");
 		
 		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
 		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
