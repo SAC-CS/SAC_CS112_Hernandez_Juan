@@ -16,7 +16,7 @@ public class GuessANumber
 		Scanner input = new Scanner (System.in);
 		
 		// User input
-		System.out.println("Guess a number between 0 and 10: ");
+		System.out.print("Enter a number between 0 and 10: ");
 		userNum = input.nextInt();
 		
 		// Process
