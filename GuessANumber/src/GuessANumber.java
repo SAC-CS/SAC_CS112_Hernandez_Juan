@@ -30,7 +30,7 @@ public class GuessANumber
 				System.out.println("Number is too small!");
 		}
 		else
-			System.out.println("You entered a number bigger than 10.");
+			System.out.println("You entered a invalid number.");
 		
 		System.out.printf("%s%d", "\nPlayer's number was: ", playerNum);
 		System.out.printf("%s%d", "\nComputer's number was: ", computerNum);
