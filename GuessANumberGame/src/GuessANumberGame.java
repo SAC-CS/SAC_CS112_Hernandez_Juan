@@ -59,7 +59,7 @@ public class GuessANumberGame
 		
 		
 		// output
-		System.out.println("Total good guesses: " + playerWins);
+		System.out.println("\nTotal good guesses: " + playerWins);
 		System.out.println("Total bad guesses: " + computerWins);
 		System.out.println("Total games played: " + totalGames);
 		
