@@ -52,7 +52,7 @@ public class GuessANumberGame
 				}
 			}
 		
-			System.out.print("\nWould you like to play again? ");
+			System.out.print("\nWould you like to play again? Enter Y or N: ");
 			answer = input.next();
 		
 		}while(answer.equalsIgnoreCase("Y"));
