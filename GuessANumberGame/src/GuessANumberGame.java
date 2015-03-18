@@ -70,4 +70,4 @@ public class GuessANumberGame
 		System.out.printf("Player win percentage: %.2f%s", playerPercentage, "%");
 		
 	}
-}
+}// 
