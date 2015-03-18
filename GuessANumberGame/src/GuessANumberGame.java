@@ -16,7 +16,6 @@ public class GuessANumberGame
 		int playerWins = 0;
 		int computerWins = 0;
 		int totalGames = 0;
-		float playerPercentage = 0;
 		String answer;
 		
 		
@@ -64,9 +63,6 @@ public class GuessANumberGame
 		outputMessage = String.format("Total good guesses: %d\nTotal bad guesses: %d\nTotal games played: %d", playerWins, computerWins, totalGames);
 
 		JOptionPane.showMessageDialog(null, outputMessage);
-		//playerPercentage = ((float) playerWins / totalGames)  * 100;
-		
-		//System.out.printf("Player win percentage: %.2f%s", playerPercentage, "%");
 		
 	}
 }// 
