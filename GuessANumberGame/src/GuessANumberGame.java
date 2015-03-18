@@ -21,7 +21,6 @@ public class GuessANumberGame
 		
 		for (int i = 0; i < 3; i++)
 		{
-			
 			computerNum = 0 + (int) (Math.random() * 10);
 			// User input
 			System.out.print("Enter a number between 0 and 10: ");
