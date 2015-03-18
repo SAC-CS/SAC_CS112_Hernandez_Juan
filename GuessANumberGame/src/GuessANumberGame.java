@@ -28,24 +28,30 @@ public class GuessANumberGame
 			
 			// Process
 			if ((playerNum < 0) || (playerNum > 10))
+			{
 				System.out.println("You entered an invalid number.");
+				System.out.println("Game number: " + (i+1));
+			}
 			else
 			{
 				if (playerNum == computerNum)
 				{
 					System.out.println("Correct, You Win!!");
+					System.out.println("Game number: " + (i+1));
 					playerWins++;
 					totalGames++;
 				}
 				else if (playerNum > computerNum)
 				{
 					System.out.println("Number is too big!");
+					System.out.println("Game number: " + (i+1));
 					computerWins++;
 					totalGames++;
 				}
 				else
 				{
 					System.out.println("Number is too small!");
+					System.out.println("Game number: " + (i+1));
 					computerWins++;
 					totalGames++;
 				}
