@@ -19,7 +19,7 @@ public class GuessANumberGame
 		
 		Scanner input = new Scanner (System.in);
 		
-		while (totalGames < 3)
+		do
 		{
 			computerNum = 0 + (int) (Math.random() * 10);
 			// User input
@@ -52,8 +52,7 @@ public class GuessANumberGame
 					totalGames++;
 				}
 			}
-		
-		}
+		}while (totalGames < 3);
 		
 		
 		// output
