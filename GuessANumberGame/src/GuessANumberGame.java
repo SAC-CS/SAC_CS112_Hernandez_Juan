@@ -19,7 +19,7 @@ public class GuessANumberGame
 		
 		Scanner input = new Scanner (System.in);
 		
-		do
+		for (int i = 0; i < 3; i++)
 		{
 			
 			computerNum = 0 + (int) (Math.random() * 10);
@@ -52,10 +52,7 @@ public class GuessANumberGame
 				}
 			}
 		
-			System.out.print("\nWould you like to play again? Enter Y or N: ");
-			answer = input.next();
-		
-		}while(answer.equalsIgnoreCase("Y"));
+		}
 		
 		
 		// output
