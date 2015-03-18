@@ -52,7 +52,7 @@ public class GuessANumberGame
 					totalGames++;
 				}
 			}
-			System.out.println("Do you want to play again? Enter Yes or No: ");
+			System.out.print("Do you want to play again? Enter Yes or No: ");
 			answer = input.next();
 			
 		}while (answer.equalsIgnoreCase("YES"));
