@@ -59,7 +59,7 @@ public class RockPaperScissor
 				{
 				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
 				break;
-				case "paper": JOptionPane.showMessageDialog(null, "Scissors beat paper, Computer Win!!");
+				case "paper": JOptionPane.showMessageDialog(null, "Scissors beat paper, Computer Wins!!");
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "It's a tie!");
 				break;
