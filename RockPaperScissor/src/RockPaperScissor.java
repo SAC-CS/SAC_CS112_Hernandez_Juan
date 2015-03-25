@@ -18,14 +18,16 @@ public class RockPaperScissor
 		String answer;
 		
 		
-
-		
 		// Process
 		do
 		{
+			
+			// user input
 			System.out.print("Enter Rock, Paper, or Scissors to play: ");
 			playerChoice = input.next();
 			
+			
+			// switch statement
 			switch(playerChoice.toLowerCase())
 			{
 			case "rock": playerNumber = 1;
@@ -38,6 +40,8 @@ public class RockPaperScissor
 			break;
 			}
 			
+			
+			// Comptuer random number
 			computerNumber = 1 + (int) (Math.random() * 3);
 			
 			if ( playerNumber == computerNumber)
