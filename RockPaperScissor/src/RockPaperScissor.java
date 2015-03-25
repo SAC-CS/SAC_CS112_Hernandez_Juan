@@ -13,7 +13,7 @@ public class RockPaperScissor
 		
 		String playerChoice;
 		int computerNumber = 0;
-		String computerChoice;
+		String computerChoice = " ";
 		String answer;
 		
 		
@@ -24,7 +24,7 @@ public class RockPaperScissor
 			playerChoice = JOptionPane.showInputDialog("Enter Rock, Paper, or Scissors to play: ");	
 
 			// Computer's random number
-			computerNumber = 0 + (int) (Math.random() * 2);
+			computerNumber = 0 + (int) (Math.random() * 3);
 			
 			switch(computerNumber)
 			{
@@ -68,8 +68,13 @@ public class RockPaperScissor
 				}
 			break;
 			}
-
+			
+			
+			System.out.println("Computer choice: " + computerChoice);
+			System.out.println("Player choice; " + playerChoice);
+			
 			answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");	
+
 		
 		}while(answer.equalsIgnoreCase("yes"));
 				
