@@ -19,8 +19,7 @@ public class RockPaperScissor
 		
 		// Process
 		do
-		{
-			
+		{	
 			// user input
 			playerChoice = JOptionPane.showInputDialog("Enter Rock, Paper, or Scissors to play: ");	
 
@@ -45,7 +44,7 @@ public class RockPaperScissor
 			case 1: computerChoice = "paper";
 				switch(playerChoice.toLowerCase())
 				{
-				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
+				case "rock": JOptionPane.showMessageDialog(null, "Paper beats rock, Computer Wins!!");
 				break;
 				case "paper": JOptionPane.showMessageDialog(null, "It's a tie!");
 				break;
