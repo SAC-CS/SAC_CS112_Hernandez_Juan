@@ -37,7 +37,7 @@ public class RockPaperScissor
 			break;
 			case "scissors": playerChoice = "scissors";
 			break;
-			default: playerNumber = 0;
+			default: playerChoice = " ";
 			break;
 			}
 			
