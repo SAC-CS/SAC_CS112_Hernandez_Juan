@@ -23,60 +23,46 @@ public class RockPaperScissor
 			
 			// user input
 			playerChoice = JOptionPane.showInputDialog("Enter Rock, Paper, or Scissors to play: ");	
-			
-			// switch statement
-			switch(playerChoice.toLowerCase())
-			{
-			case "rock": playerChoice = "rock";
-			break;
-			case "paper": playerChoice = "paper";
-			break;
-			case "scissors": playerChoice = "scissors";
-			break;
-			default: playerChoice = " ";
-			break;
-			}
-			
-			
+
 			// Computer's random number
 			computerNumber = 1 + (int) (Math.random() * 3);
 			
 			switch(computerNumber)
 			{
 			case 1: computerChoice = "rock";
+				switch(playerChoice.toLowerCase())
+				{
+				case "rock": JOptionPane.showMessageDialog(null, "It's a tie!");
+				break;
+				case "paper": JOptionPane.showMessageDialog(null, "Paper beats rock, You Win!!");
+				break;
+				case "scissors": JOptionPane.showMessageDialog(null, "Rock beats Scissors, Computer Wins!!");
+				}
 			break;
 			case 2: computerChoice = "paper";
+				switch(playerChoice.toLowerCase())
+				{
+				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
+				break;
+				case "paper": JOptionPane.showMessageDialog(null, "It's a tie!");
+				break;
+				case "scissors": JOptionPane.showMessageDialog(null, "Scissors beat paper, You Win!!");
+				}
 			break;
 			case 3: computerChoice = "scissors";
+				switch(playerChoice.toLowerCase())
+				{
+				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
+				break;
+				case "paper": JOptionPane.showMessageDialog(null, "Scissors beat paper, Computer Win!!");
+				break;
+				case "scissors": JOptionPane.showMessageDialog(null, "It's a tie!");
+				}
 			break;
 			default: computerChoice = " ";
 			break;
 			}
 
-			
-			if ( playerChoice == computerChoice)
-				JOptionPane.showMessageDialog(null, "It's a tie!");
-			
-			else if ( playerChoice.equals("rock") && computerChoice.equals("paper"))
-				JOptionPane.showMessageDialog(null, "Paper beats Rock, Computer Wins!!");
-		
-			else if (playerChoice.equals("rock") && computerChoice.equals("scissors"))
-				JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
-		
-			else if (playerChoice.equals("paper") && computerChoice.equals("rock"))
-				JOptionPane.showMessageDialog(null, "Paper beats rock, You Win!!");
-		
-			else if (playerChoice.equals("paper") && computerChoice.equals("scissors"))
-				JOptionPane.showMessageDialog(null, "Scissors beat Paper, Computer Wins!!");
-		
-			else if (playerChoice.equals("scissors") && computerChoice.equals("rock"))
-				JOptionPane.showMessageDialog(null, "Rock beats Scissors, Computer Wins!!");
-		
-			else if (playerChoice.equals("scissors") && computerChoice.equals("paper"))
-				JOptionPane.showMessageDialog(null, "Scissors beat Paper, You Win!!");
-			else
-				JOptionPane.showMessageDialog(null, "Invalid choice!");
-		
 			answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");	
 		
 		}while(answer.equalsIgnoreCase("yes"));
