@@ -25,11 +25,11 @@ public class RockPaperScissor
 			playerChoice = JOptionPane.showInputDialog("Enter Rock, Paper, or Scissors to play: ");	
 
 			// Computer's random number
-			computerNumber = 1 + (int) (Math.random() * 3);
+			computerNumber = 0 + (int) (Math.random() * 2);
 			
 			switch(computerNumber)
 			{
-			case 1: computerChoice = "rock";
+			case 0: computerChoice = "rock";
 				switch(playerChoice.toLowerCase())
 				{
 				case "rock": JOptionPane.showMessageDialog(null, "It's a tie!");
@@ -37,9 +37,12 @@ public class RockPaperScissor
 				case "paper": JOptionPane.showMessageDialog(null, "Paper beats rock, You Win!!");
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "Rock beats Scissors, Computer Wins!!");
+				break;
+				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				break;
 				}
 			break;
-			case 2: computerChoice = "paper";
+			case 1: computerChoice = "paper";
 				switch(playerChoice.toLowerCase())
 				{
 				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
@@ -47,9 +50,12 @@ public class RockPaperScissor
 				case "paper": JOptionPane.showMessageDialog(null, "It's a tie!");
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "Scissors beat paper, You Win!!");
+				break;
+				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				break;
 				}
 			break;
-			case 3: computerChoice = "scissors";
+			case 2: computerChoice = "scissors";
 				switch(playerChoice.toLowerCase())
 				{
 				case "rock": JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
@@ -57,9 +63,10 @@ public class RockPaperScissor
 				case "paper": JOptionPane.showMessageDialog(null, "Scissors beat paper, Computer Win!!");
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "It's a tie!");
+				break;
+				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				break;
 				}
-			break;
-			default: computerChoice = " ";
 			break;
 			}
 
