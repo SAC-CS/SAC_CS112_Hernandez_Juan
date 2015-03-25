@@ -52,7 +52,7 @@ public class RockPaperScissor
 			default: computerChoice = " ";
 			break;
 			}
-			// rock = 1, paper = 2, scissors = 3
+
 			
 			if ( playerChoice == computerChoice)
 				JOptionPane.showMessageDialog(null, "It's a tie!");
@@ -75,7 +75,7 @@ public class RockPaperScissor
 			else if (playerChoice.equals("scissors") && computerChoice.equals("paper"))
 				JOptionPane.showMessageDialog(null, "Scissors beat Paper, You Win!!");
 			else
-				System.out.println("Invalid choice!");
+				JOptionPane.showMessageDialog(null, "Invalid choice!");
 		
 			answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");	
 		
