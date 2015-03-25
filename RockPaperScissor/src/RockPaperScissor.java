@@ -12,39 +12,56 @@ public class RockPaperScissor
 		
 		Scanner input = new Scanner (System.in);
 		
-		int userPlayer;
-		int computerPlayer;
+		int playerNumber = 0;
+		String playerChoice;
+		int computerNumber = 0;
 		String answer;
+		
+		
+
 		
 		// Process
 		do
 		{
+			System.out.print("Enter Rock, Paper, or Scissors to play: ");
+			playerChoice = input.next();
 			
-			System.out.print("Player, enter 1 for Rock, 2 for Paper, or 3 for Scissors: ");
-			userPlayer = input.nextInt();
+			switch(playerChoice.toLowerCase())
+			{
+			case "rock": playerNumber = 1;
+			break;
+			case "paper": playerNumber = 2;
+			break;
+			case "scissors": playerNumber = 3;
+			break;
+			default: playerNumber = 0;
+			break;
+			}
 			
-			computerPlayer = 1 + (int) (Math.random() * 3);
+			computerNumber = 1 + (int) (Math.random() * 3);
 			
-			if ( userPlayer == computerPlayer)
+			if ( playerNumber == computerNumber)
 				System.out.println("It's a tie!");
 		
-			else if ( userPlayer == 1 && computerPlayer == 2)
+			else if ( playerNumber == 1 && computerNumber == 2)
 				System.out.println("Paper beats Rock, Computer Wins!!");
 		
-			else if (userPlayer == 1 && computerPlayer == 3)
+			else if (playerNumber == 1 && computerNumber == 3)
 				System.out.println("Rock beats Scissors, You Win!!");
 		
-			else if (userPlayer == 2 && computerPlayer == 1)
+			else if (playerNumber == 2 && computerNumber == 1)
 				System.out.println("Paper beats Rock, You Win!!");
 		
-			else if (userPlayer == 2 && computerPlayer == 3)
+			else if (playerNumber == 2 && computerNumber == 3)
 				System.out.println("Scissors beat Paper, Computer Wins!!");
 		
-			else if (userPlayer == 3 && computerPlayer == 1)
+			else if (playerNumber == 3 && computerNumber == 1)
 				System.out.println("Rock beats Scissors, Computer Wins!!");
 		
-			else if (userPlayer == 3 && computerPlayer == 2)
+			else if (playerNumber == 3 && computerNumber == 2)
 				System.out.println("Scissors beat Paper, You Win!!");
+			else
+				System.out.println("Invalid choice!");
 		
 			System.out.print("Do you want to play again, Y or N?: ");
 			answer = input.next();
