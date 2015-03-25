@@ -31,11 +31,11 @@ public class RockPaperScissor
 			// switch statement
 			switch(playerChoice.toLowerCase())
 			{
-			case "rock": playerChoice = "r";
+			case "rock": playerChoice = "rock";
 			break;
-			case "paper": playerChoice = "p";
+			case "paper": playerChoice = "paper";
 			break;
-			case "scissors": playerChoice = "s";
+			case "scissors": playerChoice = "scissors";
 			break;
 			default: playerNumber = 0;
 			break;
@@ -47,11 +47,11 @@ public class RockPaperScissor
 			
 			switch(computerNumber)
 			{
-			case 1: computerChoice = "r";
+			case 1: computerChoice = "rock";
 			break;
-			case 2: computerChoice = "p";
+			case 2: computerChoice = "paper";
 			break;
-			case 3: computerChoice = "s";
+			case 3: computerChoice = "scissors";
 			break;
 			default: computerChoice = " ";
 			break;
@@ -60,22 +60,22 @@ public class RockPaperScissor
 			
 			if ( playerChoice == computerChoice)
 				JOptionPane.showMessageDialog(null, "It's a tie!");
-			else if ( playerChoice.equals("r") && computerChoice.equals("p"))
+			else if ( playerChoice.equals("rock") && computerChoice.equals("paper"))
 				JOptionPane.showMessageDialog(null, "Paper beats Rock, Computer Wins!!");
 		
-			else if (playerChoice.equals("r") && computerChoice.equals("s"))
+			else if (playerChoice.equals("rock") && computerChoice.equals("scissors"))
 				JOptionPane.showMessageDialog(null, "Rock beats Scissors, You Win!!");
 		
-			else if (playerChoice.equals("p") && computerChoice.equals("r"))
+			else if (playerChoice.equals("paper") && computerChoice.equals("rock"))
 				JOptionPane.showMessageDialog(null, "Paper beats rock, You Win!!");
 		
-			else if (playerChoice.equals("p") && computerChoice.equals("s"))
+			else if (playerChoice.equals("paper") && computerChoice.equals("scissors"))
 				JOptionPane.showMessageDialog(null, "Scissors beat Paper, Computer Wins!!");
 		
-			else if (playerChoice.equals("s") && computerChoice.equals("r"))
+			else if (playerChoice.equals("scissors") && computerChoice.equals("rock"))
 				JOptionPane.showMessageDialog(null, "Rock beats Scissors, Computer Wins!!");
 		
-			else if (playerChoice.equals("s") && computerChoice.equals("p"))
+			else if (playerChoice.equals("scissors") && computerChoice.equals("paper"))
 				JOptionPane.showMessageDialog(null, "Scissors beat Paper, You Win!!");
 			else
 				System.out.println("Invalid choice!");
