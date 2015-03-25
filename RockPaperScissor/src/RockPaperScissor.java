@@ -38,7 +38,7 @@ public class RockPaperScissor
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "Rock beats Scissors, Computer Wins!!");
 				break;
-				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				default: JOptionPane.showMessageDialog(null, "Invalid choice!");
 				break;
 				}
 			break;
@@ -51,7 +51,7 @@ public class RockPaperScissor
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "Scissors beat paper, You Win!!");
 				break;
-				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				default: JOptionPane.showMessageDialog(null, "Invalid choice!");
 				break;
 				}
 			break;
@@ -64,7 +64,7 @@ public class RockPaperScissor
 				break;
 				case "scissors": JOptionPane.showMessageDialog(null, "It's a tie!");
 				break;
-				default: JOptionPane.showMessageDialog(null, "Invalid Choice!");
+				default: JOptionPane.showMessageDialog(null, "Invalid choice!");
 				break;
 				}
 			break;
