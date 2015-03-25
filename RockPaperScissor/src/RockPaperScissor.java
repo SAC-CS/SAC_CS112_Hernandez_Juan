@@ -3,18 +3,14 @@
 //
 // 03/07/2015
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class RockPaperScissor 
 {
 	public static void main (String[] args)
 	{
+
 		
-		Scanner input = new Scanner (System.in);
-		
-		int playerNumber = 0;
 		String playerChoice;
 		int computerNumber = 0;
 		String computerChoice;
@@ -60,6 +56,7 @@ public class RockPaperScissor
 			
 			if ( playerChoice == computerChoice)
 				JOptionPane.showMessageDialog(null, "It's a tie!");
+			
 			else if ( playerChoice.equals("rock") && computerChoice.equals("paper"))
 				JOptionPane.showMessageDialog(null, "Paper beats Rock, Computer Wins!!");
 		
