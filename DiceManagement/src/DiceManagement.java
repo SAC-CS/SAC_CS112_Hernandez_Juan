@@ -22,7 +22,7 @@ public class DiceManagement {
 		// Process
 		do
 		{
-			JOptionPane.showMessageDialog(null, "Player throw the dice! And guess wether it will be even or odd");
+			JOptionPane.showMessageDialog(null, "Player throw the dice and guess wether it will be even or odd!");
 			computerNum = 1 + (int) (Math.random() * 6);
 			
 			playerChoice = JOptionPane.showInputDialog("What do you think?\nEnter even or odd: ");
