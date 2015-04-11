@@ -18,20 +18,19 @@ public class TicTacToe
 		
 		while(playAgain)
 		{
-			
-			
 			outputMessageA = String.format("Let's play tic-tac-toe\n%s  %s  %s\n%s  %s  %s\n%s  %s  %s\nPlayer A:",ticArray[0], ticArray[1], ticArray[2],
 					ticArray[3], ticArray[4], ticArray[5], ticArray[6], ticArray[7], ticArray[8]);
-			
-			
+				
 			playerAChoice = JOptionPane.showInputDialog(null, outputMessageA);
 			playCount++;
 			
+			// End game if 9 plays have been made
 			if(playCount == 9)
 			{
 				JOptionPane.showMessageDialog(null, "It's a tie!");
 				System.exit(0);
 			}
+			
 			
 			switch(playerAChoice)
 			{
@@ -55,6 +54,7 @@ public class TicTacToe
 			break;
 			}
 			
+			// check to see if player A is a winner
 			if((ticArray[0] == "X" && ticArray[0] == ticArray[1] && ticArray[1] == ticArray[2]) || (ticArray[3] == "X" && ticArray[3] == ticArray[4] && ticArray[4] == ticArray[5]) 
 					|| (ticArray[6] == "X" && ticArray[6] == ticArray[7] && ticArray[7] == ticArray[8]) || (ticArray[0] == "X" && ticArray[0] == ticArray[3] && ticArray[3] == ticArray[6]) 
 					|| (ticArray[1] == "X" && ticArray[1] == ticArray[4] && ticArray[4] == ticArray[7]) || (ticArray[2] == "X" && ticArray[2] == ticArray[5] && ticArray[5] == ticArray[8])
@@ -92,7 +92,7 @@ public class TicTacToe
 			break;
 			}
 
-			
+			// Check to see if player B is a winner
 			if((ticArray[0] == "O" && ticArray[0] == ticArray[1] && ticArray[1] == ticArray[2]) || (ticArray[3] == "O" && ticArray[3] == ticArray[4] && ticArray[4] == ticArray[5]) 
 					|| (ticArray[6] == "O" && ticArray[6] == ticArray[7] && ticArray[7] == ticArray[8]) || (ticArray[0] == "O" && ticArray[0] == ticArray[3] && ticArray[3] == ticArray[6]) 
 					|| (ticArray[1] == "O" && ticArray[1] == ticArray[4] && ticArray[4] == ticArray[7]) || (ticArray[2] == "O" && ticArray[2] == ticArray[5] && ticArray[5] == ticArray[8])
