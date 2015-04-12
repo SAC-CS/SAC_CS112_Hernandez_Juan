@@ -18,7 +18,9 @@ public class TicTacToe
 		
 		while(playAgain)
 		{
-			outputMessageA = String.format("Let's play tic-tac-toe\n%s  %s  %s\n%s  %s  %s\n%s  %s  %s\nPlayer A:",ticArray[0], ticArray[1], ticArray[2],
+			
+			// Player A input dialog message
+			outputMessageA = String.format("Let's play tic-tac-toe\n%s   %s   %s\n%s   %s   %s\n%s   %s   %s\nPlayer A:",ticArray[0], ticArray[1], ticArray[2],
 					ticArray[3], ticArray[4], ticArray[5], ticArray[6], ticArray[7], ticArray[8]);
 				
 			playerAChoice = JOptionPane.showInputDialog(null, outputMessageA);
@@ -58,14 +60,14 @@ public class TicTacToe
 			}
 			
 			// End game if 9 plays have been made
-			if(playCount == 3)
+			if(playCount == 9)
 			{
 				JOptionPane.showMessageDialog(null, "It's a tie!");
 				break;
 			}
 			
-	
-			outputMessageB = String.format("Let's play tic-tac-toe\n%s  %s  %s\n%s  %s  %s\n%s  %s  %s\nPlayer B:",ticArray[0], ticArray[1], ticArray[2],
+			// Player B input dialog message
+			outputMessageB = String.format("Let's play tic-tac-toe\n%s   %s   %s\n%s   %s   %s\n%s   %s   %s\nPlayer B:",ticArray[0], ticArray[1], ticArray[2],
 					ticArray[3], ticArray[4], ticArray[5], ticArray[6], ticArray[7], ticArray[8]);
 			
 			playerBChoice = JOptionPane.showInputDialog(null, outputMessageB);
