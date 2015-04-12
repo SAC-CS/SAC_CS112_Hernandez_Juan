@@ -24,13 +24,6 @@ public class TicTacToe
 			playerAChoice = JOptionPane.showInputDialog(null, outputMessageA);
 			playCount++;
 			
-			// End game if 9 plays have been made
-			if(playCount == 9)
-			{
-				JOptionPane.showMessageDialog(null, "It's a tie!");
-				System.exit(0);
-			}
-			
 			
 			switch(playerAChoice)
 			{
@@ -61,9 +54,17 @@ public class TicTacToe
 					|| (ticArray[0] == "X" && ticArray[0] == ticArray[4] && ticArray[4] == ticArray[8]) || (ticArray[2] == "X" && ticArray[2] == ticArray[4] && ticArray[4] == ticArray[6]))
 			{
 				JOptionPane.showMessageDialog(null, "Player A Wins!");
-				System.exit(0);
+				break;
 			}
 			
+			// End game if 9 plays have been made
+			if(playCount == 3)
+			{
+				JOptionPane.showMessageDialog(null, "It's a tie!");
+				break;
+			}
+			
+	
 			outputMessageB = String.format("Let's play tic-tac-toe\n%s  %s  %s\n%s  %s  %s\n%s  %s  %s\nPlayer B:",ticArray[0], ticArray[1], ticArray[2],
 					ticArray[3], ticArray[4], ticArray[5], ticArray[6], ticArray[7], ticArray[8]);
 			
