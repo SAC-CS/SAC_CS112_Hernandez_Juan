@@ -9,7 +9,6 @@ public class GuessANumberGame
 	{
 		
 		// Variables
-		int computerNum;
 		String playerNumber;
 		String outputMessage;
 		int playerNum;
@@ -17,14 +16,15 @@ public class GuessANumberGame
 		int computerWins = 0;
 		int totalGames = 0;
 		String answer;
+		RandomNumber computerNum = new RandomNumber();
 		
 		
 		
 		do
 		{
-			computerNum = 0 + (int) (Math.random() * 10);
+			computerNum.GetANumber_Between_1_and_10();
 			// User input
-			playerNumber = JOptionPane.showInputDialog("Enter a number between 0 and 10");
+			playerNumber = JOptionPane.showInputDialog("Enter a number between 0 and 10\nYou will play until you guess the correct number");
 			playerNum = Integer.parseInt(playerNumber);
 			
 			// Process
@@ -34,29 +34,29 @@ public class GuessANumberGame
 			}
 			else
 			{
-				if (playerNum == computerNum)
-				{
-					JOptionPane.showMessageDialog(null, "Correct, you win");
-					playerWins++;
-					totalGames++;
-				}
-				else if (playerNum > computerNum)
+				if (playerNum > computerNum.GetANumber_Between_1_and_10())
 				{
 					JOptionPane.showMessageDialog(null, "Number is too big!");
 					computerWins++;
 					totalGames++;
 				}
-				else
+				else if (playerNum < computerNum.GetANumber_Between_1_and_10())
 				{
 					JOptionPane.showMessageDialog(null, "Number is too small!");
 					computerWins++;
 					totalGames++;
 				}
 			}
-			answer = JOptionPane.showInputDialog("Do you want to play again? Enter Yes or No: ");	
 			
-		}while (answer.equalsIgnoreCase("YES"));
+			System.out.println(computerNum.GetANumber_Between_1_and_10());
+			
+		}while (playerNum != computerNum.GetANumber_Between_1_and_10());
 		
+		playerWins++;
+		totalGames++;
+		
+		
+		JOptionPane.showMessageDialog(null, "Correct, you win");
 		
 		// output
 		
