@@ -65,7 +65,7 @@ public class TicTacToe
 				break;
 			}
 			
-			// End game if 9 plays have been made
+			// End game if 9 plays have been made and there's no winner.
 			if(playCount == 9)
 			{
 				JOptionPane.showMessageDialog(null, "It's a tie!");
