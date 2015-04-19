@@ -7,7 +7,14 @@ public class GitTestBeast
 	public static void main (String[] args)
 	{
 
-		System.out.println("Git Test Minnie Beast 3");
+		int numOne = 0;
+		
+		for ( int i = 0; i <= 100; i++)
+		{
+			numOne = numOne + i;
+		}
+		
+		System.out.println(numOne);
 		
 	}
 

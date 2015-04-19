@@ -27,14 +27,14 @@ public class DiceManagement {
 			
 			playerChoice = JOptionPane.showInputDialog("What do you think?\nEnter even or odd: ");
 			
-			if ( playerChoice.equalsIgnoreCase("even") && (computerNum == 2 || computerNum == 4 || computerNum == 6))
+			if ( playerChoice.equalsIgnoreCase("even") && (computerNum % 2 == 0))
 			{
 				JOptionPane.showMessageDialog(null, "Correct, the throw was even!");
 				gamesPlayed++;
 				playerWins++;
 				evenGuesses++;
 			}
-			else if ( playerChoice.equalsIgnoreCase("odd") && (computerNum == 1 || computerNum == 3 || computerNum == 5))
+			else if ( playerChoice.equalsIgnoreCase("odd") && (computerNum % 2 != 0))
 			{
 				JOptionPane.showMessageDialog(null, "Correct, the throw was odd!");
 				gamesPlayed++;
@@ -42,12 +42,12 @@ public class DiceManagement {
 				computerOdd++;
 			}
 			
-			else if ( playerChoice.equalsIgnoreCase("odd") && (computerNum == 2 || computerNum == 4 || computerNum == 6))
+			else if ( playerChoice.equalsIgnoreCase("odd") && (computerNum % 2 == 0))
 			{
 				JOptionPane.showMessageDialog(null, "You lose, the throw was even!");
 				gamesPlayed++;
 			}
-			else if ( playerChoice.equalsIgnoreCase("even") && (computerNum == 1 || computerNum == 3 || computerNum == 5))
+			else if ( playerChoice.equalsIgnoreCase("even") && (computerNum % 2 != 0))
 			{
 				JOptionPane.showMessageDialog(null, "You lose, the throw was odd!");
 				gamesPlayed++;
@@ -58,12 +58,11 @@ public class DiceManagement {
 			else 
 				JOptionPane.showMessageDialog(null, "Invalid choice, try again.");
 			
-			answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");
-			
-			
 			// Debug output to make sure it's correct.
 			System.out.println(playerChoice);
 			System.out.println(computerNum);
+			
+			answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");
 			
 			
 		}while(answer.equalsIgnoreCase("yes"));

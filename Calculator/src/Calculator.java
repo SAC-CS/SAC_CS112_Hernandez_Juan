@@ -1,4 +1,8 @@
-import java.util.Scanner;
+// Juan P Hernandez
+// Program: Rock Paper Scissors
+// 03/07/2015
+
+import javax.swing.JOptionPane;
 
 
 public class Calculator 
