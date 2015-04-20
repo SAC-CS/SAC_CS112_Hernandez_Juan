@@ -16,7 +16,7 @@ public class DiceManagement {
 		float playerEven = 0;
 		float oddPercentage = 0;
 		String playerChoice = " ";
-		String answer;
+		String answer = " ";
 		
 		DiceNumber myDiceManagement = new DiceNumber(computerNum);
 		
