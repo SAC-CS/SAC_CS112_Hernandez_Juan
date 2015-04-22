@@ -44,3 +44,5 @@ public class DiceManagement {
 	}
 
 }
+
+//// Good job bnut the constructor is a bit funky
