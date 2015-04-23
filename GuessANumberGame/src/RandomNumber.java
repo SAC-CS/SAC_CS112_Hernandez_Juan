@@ -9,4 +9,6 @@ public class RandomNumber
 		
 		return computerNum;
 	}
+	
+
 }
