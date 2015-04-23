@@ -59,9 +59,6 @@ public class GuessANumberGame
 		playerWins++;
 		totalGames++;
 		
-		
-		
-		
 		// output
 		
 		outputMessage = String.format("Total good guesses: %d\nTotal bad guesses: %d\nTotal games played: %d", playerWins, computerWins, totalGames);
