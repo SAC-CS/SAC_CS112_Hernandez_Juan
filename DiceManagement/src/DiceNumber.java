@@ -19,10 +19,7 @@ public class DiceNumber
 	private String outputMessage;
 	
 	
-	public DiceNumber(int computerNum)
-	{
-		randomNum = computerNum;
-	}
+	public DiceNumber(){}
 	
 	public void setRandomNumber(int computerNum)
 	{
