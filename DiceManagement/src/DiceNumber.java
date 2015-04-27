@@ -7,14 +7,10 @@ public class DiceNumber
 	private float calculation;
 	private int numOne;
 	private int numTwo;
-	private int gamesPlayed = 0;
-	private int playerWins = 0;
-	private int evenGuesses = 0;
-	private int computerOdd = 0;
-	private float winPercentage = 0;
-	private float playerEven = 0;
-	private float oddPercentage = 0;
+	private int diceChoice = 0;
+	private int choicePts = 0;
 	private String playerChoice;
+	private String choicePoints;
 	private String answer;
 	private String outputMessage;
 	
@@ -26,24 +22,36 @@ public class DiceNumber
 		randomNum = computerNum;
 	}
 	
+
+	// User Input
+	public int userInputMessage()
+	{
+		 playerChoice = JOptionPane.showInputDialog("Player, How many dices do you want to roll? 1, 2 or 3?");
+		 return diceChoice = Integer.parseInt(playerChoice);
+	}
+	
+	public int userGuessPoints()
+	{
+		choicePoints = JOptionPane.showInputDialog("How many points do you think it would be?");
+		 return choicePts = Integer.parseInt(choicePoints);
+	}
+	
 	// Random Number
 	public int getRandomNumber()
 	{
-		randomNum = 1 + (int) (Math.random() * 6);
-		
+		if(diceChoice == 1)
+		{
+			randomNum = 1 + (int) (Math.random() * 6);
+		}
+		else if(diceChoice == 2)
+		{
+			randomNum = 2 + (int) (Math.random() * 12);
+		}
+		else if(diceChoice == 3)
+		{
+			randomNum = 3 + (int) (Math.random() * 18);
+		}
 		return randomNum;
-	}
-	
-	// Welcome Message
-	public void welcomeMessage()
-	{
-		JOptionPane.showMessageDialog(null, "Player throw the dice and guess whether it will be even or odd!");
-	}
-	
-	// User Input
-	public String userInputMessage()
-	{
-		return playerChoice = JOptionPane.showInputDialog("What do you think?\nEnter even or odd: ");
 	}
 	
 	// Play again message
@@ -51,69 +59,59 @@ public class DiceNumber
 	{
 		return answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");
 	}
-	
-	public float winPercentage(int numOne, int numTwo)
-	{
-		return winPercentage = ((float) playerWins / gamesPlayed) * 100;
-	}
-	
-	public float playerEven(int numOne, int numTwo)
-	{
-		return playerEven = ((float) evenGuesses / gamesPlayed) * 100;
-	}
-	
-	public float oddPercentage(int numOne, int numTwo)
-	{
-		return oddPercentage = ((float) computerOdd / gamesPlayed) * 100;
-	}
-	
-	public int gamesPlayed()
-	{
-		return gamesPlayed;
-	}
-	
+
 	// Win or lose process
 	public void winLoseMessage()
 	{
-		if (playerChoice.equalsIgnoreCase("even") && (randomNum % 2 == 0))
+		if ((diceChoice == 1) && (choicePts > 0) && (choicePts <= 6))
 		{
-			JOptionPane.showMessageDialog(null, "Correct, the throw was even!");
-			gamesPlayed++;
-			playerWins++;
-			evenGuesses++;
+			if (randomNum == choicePts)
+			{
+				outputMessage = String.format("Correct, you win! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}
+			else if (randomNum != choicePts)
+			{
+				outputMessage = String.format("Sorry, you lose! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}		
 		}
-		else if (playerChoice.equalsIgnoreCase("odd") && (randomNum % 2 != 0))
+
+		else if ((diceChoice == 2) && (choicePts > 0) && (choicePts <= 12))
 		{
-			JOptionPane.showMessageDialog(null, "Correct, the throw was odd!");
-			gamesPlayed++;
-			playerWins++;
-			computerOdd++;
+			if (randomNum == choicePts)
+			{
+				outputMessage = String.format("Correct, you win! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}
+			else if (randomNum != choicePts)
+			{
+				outputMessage = String.format("Sorry, you lose! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}
 		}
 		
-		else if (playerChoice.equalsIgnoreCase("odd") && (randomNum % 2 == 0))
+		else if ((diceChoice == 3) && (choicePts > 0) && (choicePts <= 18))
 		{
-			JOptionPane.showMessageDialog(null, "You lose, the throw was even!");
-			gamesPlayed++;
+			if (randomNum == choicePts)
+			{
+				outputMessage = String.format("Correct, you win! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}
+			else if (randomNum != choicePts)
+			{
+				outputMessage = String.format("Sorry, you lose! The dice threw %d", randomNum);
+				JOptionPane.showMessageDialog(null, outputMessage);
+
+			}
+
 		}
-		else if (playerChoice.equalsIgnoreCase("even") && (randomNum % 2 != 0))
-		{
-			JOptionPane.showMessageDialog(null, "You lose, the throw was odd!");
-			gamesPlayed++;
-			evenGuesses++;
-			computerOdd++;
-		}
-		
-		else 
+		else
 			JOptionPane.showMessageDialog(null, "Invalid choice, try again.");
 	}
-	
-	// Overall game summary
-	public void displayMessage(int gamesPlayed, float winPercentage, float playerEven, float oddPercentage)
-	{
-		outputMessage = String.format("Total games played: %d\nPlayer win percentage: %.0f%%\nPlayer guessed even %.0f%% of the time"
-				+ "\nDice rolled odd numbers %.0f%% of the time", gamesPlayed, winPercentage, playerEven, oddPercentage);
-		
-		JOptionPane.showMessageDialog(null, outputMessage);
-	}
-	
 }

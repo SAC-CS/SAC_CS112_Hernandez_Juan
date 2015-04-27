@@ -8,39 +8,29 @@ public class DiceManagement {
 	public static void main(String[] args) 
 	{
 		int computerNum = 0;
-		int gamesPlayed = 0;
-		int playerWins = 0;
-		int evenGuesses = 0;
-		int computerOdd = 0;
-		float winPercentage = 0;
-		float playerEven = 0;
-		float oddPercentage = 0;
-		String playerChoice = " ";
+		int playerChoice = 0;
+		int choicePts = 0;
 		String answer = " ";
 		
 		DiceNumber myDiceManagement = new DiceNumber();
 		
 		// Process
 		do
-		{
-			myDiceManagement.welcomeMessage();
-			computerNum = myDiceManagement.getRandomNumber();	
+		{	
 			playerChoice = myDiceManagement.userInputMessage();
+			choicePts = myDiceManagement.userGuessPoints();
+			computerNum = myDiceManagement.getRandomNumber();
 			myDiceManagement.winLoseMessage();
 			
 			// Debug output to make sure it's correct.
 			System.out.println(playerChoice);
+			System.out.println(choicePts);
 			System.out.println(computerNum);
 			
 			answer = myDiceManagement.playAgain();		
 			
 		}while(answer.equalsIgnoreCase("yes"));
 			
-		winPercentage = myDiceManagement.winPercentage(playerWins, gamesPlayed);
-		playerEven = myDiceManagement.playerEven(evenGuesses, gamesPlayed);
-		oddPercentage = myDiceManagement.oddPercentage(computerOdd, gamesPlayed);
-		gamesPlayed = myDiceManagement.gamesPlayed();
-		myDiceManagement.displayMessage(gamesPlayed, winPercentage, playerEven, oddPercentage);
 	}
 
 }
