@@ -116,3 +116,5 @@ public class DiceNumber
 	}
 
 }
+
+// Good, but why waste the constructor public DiceNumber(){}
