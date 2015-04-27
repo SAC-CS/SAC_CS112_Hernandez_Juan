@@ -18,7 +18,7 @@ public class DiceManagement {
 		String playerChoice = " ";
 		String answer = " ";
 		
-		DiceNumber myDiceManagement = new DiceNumber(computerNum);
+		DiceNumber myDiceManagement = new DiceNumber();
 		
 		// Process
 		do
