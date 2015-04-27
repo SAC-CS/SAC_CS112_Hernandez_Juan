@@ -119,4 +119,4 @@ public class DiceNumber
 		JOptionPane.showMessageDialog(null, outputMessage);
 	}
 	
-}
+}//
