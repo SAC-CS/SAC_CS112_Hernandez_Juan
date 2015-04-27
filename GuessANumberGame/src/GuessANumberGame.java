@@ -49,21 +49,15 @@ public class GuessANumberGame
 					totalGames++;
 				}
 				else
-				{
 					JOptionPane.showMessageDialog(null, "Correct, you win");
-					playerWins++;
-					totalGames++;
-				}
 			}
 			
 			System.out.println(computerNum);
 			
 		}while (playerNum != computerNum);
 		
-
-		
-		
-		
+		playerWins++;
+		totalGames++;
 		
 		// output
 		
@@ -72,4 +66,4 @@ public class GuessANumberGame
 		JOptionPane.showMessageDialog(null, outputMessage);
 		
 	}
-}
+}////
