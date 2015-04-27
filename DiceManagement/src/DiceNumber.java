@@ -54,12 +54,6 @@ public class DiceNumber
 		return randomNum;
 	}
 	
-	// Play again message
-	public String playAgain()
-	{
-		return answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");
-	}
-
 	// Win or lose process
 	public void winLoseMessage()
 	{
@@ -114,4 +108,11 @@ public class DiceNumber
 		else
 			JOptionPane.showMessageDialog(null, "Invalid choice, try again.");
 	}
+	
+	// Play again message
+	public String playAgain()
+	{
+		return answer = JOptionPane.showInputDialog("Do you want to play again, Yes or No?: ");
+	}
+
 }
