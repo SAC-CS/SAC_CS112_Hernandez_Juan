@@ -1,22 +1,49 @@
 
 public class Dice 
 {
-	private int mDiceCount;
+	private int diceValue = 0;
+	private int bounces;
+	private int finalValue;
+	private int totalThrows;
 	
-	public Dice(int DiceCount)
+	public Dice(int bounces)
 	{
-		this.mDiceCount = DiceCount;
+		this.bounces = bounces;
 	}
-	
-	public int RollDice()
+
+	public int Throw(int dices, int bounces)
 	{
-		int val = 0;
-		for (int i = 0; i < mDiceCount; i++)
+		totalThrows++;
+		int diceAverage = 0;
+		int bounceSum = 0;
+		
+		for (int i = 0; i < dices; i++)
 		{
-			val = val + (int) (Math.random() * 6) + 1;
+			bounceSum = 0;
+			for (int j = 0; j < bounces; j++)
+			{
+				diceValue = (int) (Math.random() * 6) + 1;
+				bounceSum = bounceSum + diceValue;
+				System.out.printf("Bounces Sum %d\n", bounceSum);
+			}
+			diceAverage = diceAverage + (bounceSum / bounces);
+            System.out.printf("bounces value %d\n", bounces);
+            System.out.printf("Average dicesSum %d\n", diceAverage);
 		}
 		
-		return val;
+		finalValue = diceAverage / dices;
+		System.out.printf("Average %d\n", finalValue);
+		return finalValue;
+	}
+	
+	public int getValue()
+	{
+		return finalValue;
+	}
+	
+	public int getTotalThrows()
+	{
+		return totalThrows;
 	}
 }
  
