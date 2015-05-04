@@ -14,7 +14,7 @@ public class Dice
 	private String answer;
 	
 	Scanner input = new Scanner(System.in);
-	
+	// Good, but please see if you can have a constructor for user to initialized bounces when they instantiate the Dice object.
 	public Dice()
 	{
 		this.bounces = 1;
