@@ -5,46 +5,43 @@ public class DiceGame {
 	public static void main(String[] args) 
 	{
 		int finalVal = 0;
-		int guessValue = 0;
+		int userGuess = 0;
 		int diceValue = 0;
 		int diceCount = 0;
 		int diceBounces = 0;
 		String answer = "No";
 		
-		Scanner read = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		
+		System.out.println("Let's play some dice.");
+		
+		Dice dicePlusGame = new Dice();
+
 		do
 		{
-			
-			// Get player bounces
-			System.out.print("How many dices do you want? ");
-			diceCount = read.nextInt();
+			// Get player number of dice and bounces.
+			System.out.print("\nHow many dices do you want? ");
+			diceCount = input.nextInt();
 			
 			System.out.print("How many bounces do you want? ");
-			diceBounces = read.nextInt();
+			diceBounces = input.nextInt();
 			
 			// roll the dice
-			Dice gameDice = new Dice(diceBounces);
-			finalVal = gameDice.Throw(diceCount, diceBounces);
+			finalVal = dicePlusGame.Throw(diceCount, diceBounces);
 			
-			// Get player guess
-			System.out.print("What number are you guessing? ");
-			guessValue = read.nextInt();
+			// Get player guess			
+			userGuess = dicePlusGame.getUserGuess();
 			
-			// Compare and display result
-			if (guessValue == finalVal)
-			{
-				System.out.print("Well done! The dice rolled " + finalVal + ".");
-			}
-			else 
-			{
-				System.out.print("Sorry try again, the dice rolled " + finalVal + ".");
-			}
+			// Display Result
+			dicePlusGame.displayResult();
 			
-			System.out.print("\nDo you want to play again? (Yes or No) ");
-			answer = read.next();
+			// Ask user if they want to play again
+			answer = dicePlusGame.playAgain();
+
 			
-		}while (answer.equalsIgnoreCase("Yes"));
+		}while (answer.equalsIgnoreCase("YES"));
+		
+		dicePlusGame.displayFinalResult();
 		
 	}
 
